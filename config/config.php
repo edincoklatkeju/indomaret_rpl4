@@ -1,5 +1,12 @@
 <?php
-$connection = mysqli_connect("localhost", "root", "", "indomaret");
+$connection = mysqli_connect(
+    "localhost",
+    "root",
+    "",
+    "indomaret"
+);
 
-var_dump($connection);
+if (!$connection) {
+    die("Koneksi database gagal: " . mysqli_connect_error());
+}
 ?>
